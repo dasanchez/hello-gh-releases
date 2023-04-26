@@ -1,7 +1,7 @@
 ---
 name: Upgrade request
 about: New version ready
-title: "[Upgrade] Upgrade [Testnet] to [version]"
+title: "[Upgrade] Upgrade <network> to <version>"
 labels: ''
 assignees: ''
 
