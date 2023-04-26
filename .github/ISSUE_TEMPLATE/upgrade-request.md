@@ -1,13 +1,13 @@
 ---
-name: New version ready
-about: Network upgrade request
-title: "[Upgrade]"
+name: Upgrade request
+about: New version ready
+title: "[Upgrade] Upgrade [Testnet] to [version]"
 labels: ''
 assignees: ''
 
 ---
 
-## Upgrade requested
+## Network upgrade request
 
 - [ ] Network: `chain id`
 - [ ] New version: `vA.B.C`
