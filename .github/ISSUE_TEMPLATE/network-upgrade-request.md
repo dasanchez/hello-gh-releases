@@ -3,11 +3,11 @@ name: Network upgrade request
 about: New version ready
 title: Upgrade <network> to <version>
 labels: ''
-assignees: ''
+assignees: dasanchez
 
 ---
 
-## Network upgrade request
+## Version upgrade requested
 
 * Network: `chain id`
 * New version: `vA.B.C`
