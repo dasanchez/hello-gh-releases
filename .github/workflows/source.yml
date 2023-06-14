@@ -1,6 +1,7 @@
 ---
 name: Triggering Workflow
 on:
+  workflow_dispatch:
   push:
 
 jobs:
