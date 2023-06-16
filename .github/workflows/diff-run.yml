@@ -16,3 +16,18 @@ jobs:
           path: gaia
       - name: List files
         run: ls gaia
+      - name: Generate diff
+        id: git_diff
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            **/*.go
+            go.mod
+            go.sum
+            **/go.mod
+            **/go.sum
+            **/Makefile
+            Makefile
+          RELATIVE: 'gaia'
+      - name: Print diff
+        run: echo $GIT_DIFF
