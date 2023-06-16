@@ -20,7 +20,7 @@ jobs:
         run: |
           cd gaia
           commit=$(git log -n 1 main)
-          git diff-tree --no-commit-id --name-only $commit
+          git diff-tree --no-commit-id --name-only $commit -r
       # - name: Generate diff
       #   id: git_diff
       #   uses: technote-space/get-diff-action@v6
