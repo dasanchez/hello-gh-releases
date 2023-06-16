@@ -9,16 +9,18 @@ jobs:
     name: Test repo diff
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v3
-        with:
-          repository: cosmos/gaia
-          path: gaia
-      - name: List files
-        run: ls gaia
+      # - name: Check out repo
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: cosmos/gaia
+      #     path: gaia
+      # - name: List files
+      #   run: ls gaia
       - name: Get list of modified files
         run: |
+          git clone https://github.com/cosmos/gaia.git
           cd gaia
+          ls
           commit=$(git log -n 1 main --pretty=format:"%H")
           echo $commit
           file_list=$(git diff-tree --no-commit-id --name-only $commit -r)
