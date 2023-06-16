@@ -19,7 +19,7 @@ jobs:
       - name: Get list of modified files
         run: |
           cd gaia
-          commit=$(git log -n 1 main)
+          commit=$(git log -n 1 main --pretty=format:"%H")
           echo $commit
           git diff-tree --no-commit-id --name-only $commit -r
       # - name: Generate diff
