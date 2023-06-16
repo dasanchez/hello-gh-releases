@@ -21,7 +21,8 @@ jobs:
           cd gaia
           commit=$(git log -n 1 main --pretty=format:"%H")
           echo $commit
-          git diff-tree --no-commit-id --name-only $commit -r
+          file_list=$(git diff-tree --no-commit-id --name-only $commit -r)
+          echo $file_list
       # - name: Generate diff
       #   id: git_diff
       #   uses: technote-space/get-diff-action@v6
