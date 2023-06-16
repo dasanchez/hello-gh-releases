@@ -20,11 +20,8 @@ jobs:
         run: |
           git clone https://github.com/cosmos/gaia.git
           cd gaia
-          ls
           commit=$(git log -n 1 main --pretty=format:"%H")
-          echo $commit
-          file_list=$(git diff-tree --no-commit-id --name-only $commit -r)
-          echo $file_list
+          git diff-tree --no-commit-id --name-only $commit -r
       # - name: Generate diff
       #   id: git_diff
       #   uses: technote-space/get-diff-action@v6
